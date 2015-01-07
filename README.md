@@ -7,13 +7,13 @@ The following changes in VM semantics were implemented:
 
 - the string "0" is false
 
--- in constants (in constant folding)
+ - in constants (in constant folding)
 
--- in native strings (in variables)
+ - in native strings (in variables)
 
--- TODO: in String objects
+ - TODO: in String objects
 
--- BUG: some tests time out, such as: ecma_5/Object/15.2.3.6-middle-redefinition-2-of-8.js
+ - BUG: some tests time out, such as: ecma_5/Object/15.2.3.6-middle-redefinition-2-of-8.js
 
 Everything else is TODO:
 
