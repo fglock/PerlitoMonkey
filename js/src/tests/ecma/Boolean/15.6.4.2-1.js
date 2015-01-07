@@ -31,7 +31,7 @@ new TestCase( SECTION,   "new Boolean(1)",       "true",   (new Boolean(1)).toSt
 new TestCase( SECTION,   "new Boolean(0)",       "false",  (new Boolean(0)).toString() );
 new TestCase( SECTION,   "new Boolean(-1)",      "true",   (new Boolean(-1)).toString() );
 new TestCase( SECTION,   "new Boolean('1')",     "true",   (new Boolean("1")).toString() );
-new TestCase( SECTION,   "new Boolean('0')",     "true",   (new Boolean("0")).toString() );
+new TestCase( SECTION,   "new Boolean('0')",     "false",  (new Boolean("0")).toString() );
 new TestCase( SECTION,   "new Boolean(true)",    "true",   (new Boolean(true)).toString() );
 new TestCase( SECTION,   "new Boolean(false)",   "false",  (new Boolean(false)).toString() );
 new TestCase( SECTION,   "new Boolean('true')",  "true",   (new Boolean('true')).toString() );

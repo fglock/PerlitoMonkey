@@ -39,7 +39,7 @@ new TestCase( SECTION,   "!(1)",                   false,  !(1) );
 new TestCase( SECTION,   "!(-1)",                  false,  !(-1) );
 new TestCase( SECTION,   "!('')",                  true,   !("") );
 new TestCase( SECTION,   "!('\t')",                false,  !("\t") );
-new TestCase( SECTION,   "!('0')",                 false,  !("0") );
+new TestCase( SECTION,   "!('0')",                 true,   !("0") );
 new TestCase( SECTION,   "!('string')",            false,  !("string") );
 new TestCase( SECTION,   "!(new String(''))",      false,  !(new String("")) );
 new TestCase( SECTION,   "!(new String('string'))",    false,  !(new String("string")) );

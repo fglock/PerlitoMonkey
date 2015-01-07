@@ -49,7 +49,7 @@ new TestCase( SECTION,   "Boolean(Math.PI)",              true,   Boolean(Math.P
 new TestCase( SECTION,   "Boolean(1)",                    true,   Boolean(1) );
 new TestCase( SECTION,   "Boolean(-1)",                   true,   Boolean(-1) );
 new TestCase( SECTION,   "Boolean([tab])",                true,   Boolean("\t") );
-new TestCase( SECTION,   "Boolean('0')",                  true,   Boolean("0") );
+new TestCase( SECTION,   "Boolean('0')",                  false,  Boolean("0") );
 new TestCase( SECTION,   "Boolean('string')",             true,   Boolean("string") );
 
 // ToBoolean (object) should always return true.

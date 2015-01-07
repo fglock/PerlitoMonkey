@@ -175,7 +175,7 @@ JS_PUBLIC_API(bool)
 js::ToBooleanSlow(HandleValue v)
 {
     if (v.isString())
-        return v.toString()->length() != 0;
+        return !(v.toString()->length() == 0 || v.toString()->equals("0"));
 
     MOZ_ASSERT(v.isObject());
     return !EmulatesUndefined(&v.toObject());

@@ -30,7 +30,7 @@ new TestCase( SECTION,   "new Boolean(1)",       true,   (new Boolean(1)).valueO
 new TestCase( SECTION,   "new Boolean(0)",       false,  (new Boolean(0)).valueOf() );
 new TestCase( SECTION,   "new Boolean(-1)",      true,   (new Boolean(-1)).valueOf() );
 new TestCase( SECTION,   "new Boolean('1')",     true,   (new Boolean("1")).valueOf() );
-new TestCase( SECTION,   "new Boolean('0')",     true,   (new Boolean("0")).valueOf() );
+new TestCase( SECTION,   "new Boolean('0')",     false,  (new Boolean("0")).valueOf() );
 new TestCase( SECTION,   "new Boolean(true)",    true,   (new Boolean(true)).valueOf() );
 new TestCase( SECTION,   "new Boolean(false)",   false,  (new Boolean(false)).valueOf() );
 new TestCase( SECTION,   "new Boolean('true')",  true,   (new Boolean("true")).valueOf() );

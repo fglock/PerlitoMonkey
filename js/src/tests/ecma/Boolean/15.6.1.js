@@ -39,7 +39,7 @@ new TestCase( SECTION,   "Boolean(1)",         true,   Boolean(1) );
 new TestCase( SECTION,   "Boolean(0)",         false,  Boolean(0) );
 new TestCase( SECTION,   "Boolean(-1)",        true,   Boolean(-1) );
 new TestCase( SECTION,   "Boolean('1')",       true,   Boolean("1") );
-new TestCase( SECTION,   "Boolean('0')",       true,   Boolean("0") );
+new TestCase( SECTION,   "Boolean('0')",       false,  Boolean("0") );
 new TestCase( SECTION,   "Boolean('-1')",      true,   Boolean("-1") );
 new TestCase( SECTION,   "Boolean(true)",      true,   Boolean(true) );
 new TestCase( SECTION,   "Boolean(false)",     false,  Boolean(false) );

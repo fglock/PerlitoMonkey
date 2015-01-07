@@ -65,7 +65,7 @@ new TestCase( SECTION,
 	      "TESTBOOL=new Boolean('0');TESTBOOL.toString=Object.prototype.toString;TESTBOOL.toString()",
 	      "[object Boolean]",
 	      eval("TESTBOOL=new Boolean('0');TESTBOOL.toString=Object.prototype.toString;TESTBOOL.toString()") );
-new TestCase( SECTION,   "(new Boolean('0')).valueOf()",   true,       (new Boolean('0')).valueOf() );
+new TestCase( SECTION,   "(new Boolean('0')).valueOf()",   false,       (new Boolean('0')).valueOf() );
 new TestCase( SECTION,   "typeof new Boolean('0')",         "object",   typeof new Boolean('0') );
 new TestCase( SECTION,   "(new Boolean('-1')).constructor",    Boolean.prototype.constructor,   (new Boolean('-1')).constructor );
 new TestCase( SECTION,
