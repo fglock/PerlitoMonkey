@@ -60,7 +60,7 @@ new TestCase( SECTION,   "Boolean(new Boolean(true))",    true,   Boolean(new Bo
 new TestCase( SECTION,   "Boolean(new Boolean(false))",   true,   Boolean(new Boolean(false)) );
 new TestCase( SECTION,   "Boolean(new Boolean() )",       true,   Boolean(new Boolean()) );
 
-new TestCase( SECTION,   "Boolean(new Array())",          true,   Boolean(new Array()) );
+new TestCase( SECTION,   "Boolean(new Array())",          false,  Boolean(new Array()) );
 
 new TestCase( SECTION,   "Boolean(new Number())",         true,   Boolean(new Number()) );
 new TestCase( SECTION,   "Boolean(new Number(-0))",       true,   Boolean(new Number(-0)) );

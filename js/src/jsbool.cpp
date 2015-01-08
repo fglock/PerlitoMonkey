@@ -179,7 +179,7 @@ js::ToBooleanSlow(HandleValue v)
         if (s->length() == 0) return false;
         if (s->length() > 1) return true;
 
-        /* "0" is false */
+        /* string "0" is false */
         JSLinearString *linear = s->ensureLinear(nullptr);
         if (!linear) {
             return false;
@@ -188,7 +188,26 @@ js::ToBooleanSlow(HandleValue v)
     }
 
     MOZ_ASSERT(v.isObject());
-    return !EmulatesUndefined(&v.toObject());
+    JSObject &o = v.toObject();
+
+    /* if the object has 'length', then the truth value is: (length != 0) */
+    if (o.is<ArrayObject>())
+        return (o.as<ArrayObject>().length() == 0) ? false : true;
+
+    /*
+        TODO - "Error" objects are true
+
+        TODO - if the object has properties, it is true; empty hash is false.
+
+        if (o instanceof Error) {
+            return true;
+        }
+        for (var i in o) {
+            return true;
+        }
+    */
+
+    return !EmulatesUndefined(&o);
 }
 
 /*

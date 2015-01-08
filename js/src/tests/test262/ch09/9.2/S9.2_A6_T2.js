@@ -39,7 +39,7 @@ if (!(new Boolean()) !== false) {
 }
 
 // CHECK#7
-if (!(new Array()) !== false) {
+if (!(new Array()) !== true) {
   $ERROR('#7: !(new Array()) === false. Actual: ' + (!(new Array())));	
 }
 

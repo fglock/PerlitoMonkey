@@ -9,6 +9,7 @@ The following changes in VM semantics were implemented:
 
  - Note: String objects are still always true
 
+- empty array is false; `new Array()` is also false
 
 Everything else is TODO:
 

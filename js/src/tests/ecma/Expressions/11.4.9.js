@@ -46,7 +46,7 @@ new TestCase( SECTION,   "!(new String('string'))",    false,  !(new String("str
 new TestCase( SECTION,   "!(new String())",        false,  !(new String()) );
 new TestCase( SECTION,   "!(new Boolean(true))",   false,   !(new Boolean(true)) );
 new TestCase( SECTION,   "!(new Boolean(false))",  false,   !(new Boolean(false)) );
-new TestCase( SECTION,   "!(new Array())",         false,  !(new Array()) );
+new TestCase( SECTION,   "!(new Array())",         true,   !(new Array()) );
 new TestCase( SECTION,   "!(new Array(1,2,3)",     false,  !(new Array(1,2,3)) );
 new TestCase( SECTION,   "!(new Number())",        false,  !(new Number()) );
 new TestCase( SECTION,   "!(new Number(0))",       false,  !(new Number(0)) );
