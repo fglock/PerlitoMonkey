@@ -234,7 +234,7 @@ Boolish(ParseNode *pn)
         return (pn->pn_dval != 0 && !IsNaN(pn->pn_dval)) ? Truthy : Falsy;
 
       case PNK_STRING:
-        return (pn->pn_atom->length() == 0 || pn->pn_atom->equals("0")) ? Falsy : Truthy;
+        return (pn->pn_atom->length() == 0) ? Falsy : Unknown;
 
       case PNK_TRUE:
       case PNK_FUNCTION:
@@ -454,8 +454,10 @@ Fold(ExclusiveContext *cx, ParseNode **pnp,
                 pn2 = pn3;
             break;
           case PNK_STRING:
-            if (pn1->pn_atom->length() == 0 || pn1->pn_atom->equals("0"))
+            if (pn1->pn_atom->length() == 0)
                 pn2 = pn3;
+            else
+                return true;
             break;
           case PNK_TRUE:
             break;

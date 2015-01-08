@@ -174,8 +174,18 @@ js_BooleanToString(ExclusiveContext *cx, bool b)
 JS_PUBLIC_API(bool)
 js::ToBooleanSlow(HandleValue v)
 {
-    if (v.isString())
-        return !(v.toString()->length() == 0 || v.toString()->equals("0"));
+    if (v.isString()) {
+        JSString *s = v.toString();
+        if (s->length() == 0) return false;
+        if (s->length() > 1) return true;
+
+        /* "0" is false */
+        JSLinearString *linear = s->ensureLinear(nullptr);
+        if (!linear) {
+            return false;
+        }
+        return !StringEqualsAscii(linear, "0");
+    }
 
     MOZ_ASSERT(v.isObject());
     return !EmulatesUndefined(&v.toObject());
